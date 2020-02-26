@@ -1,0 +1,17 @@
+image: node:alpine
+
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+    - cp -r ./build/* ./public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

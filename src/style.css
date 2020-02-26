@@ -1,0 +1,10 @@
+#map {
+  height: 100vh;
+}
+
+.print-map {
+  overflow: hidden;
+  height: 0;
+  width: 0;
+  position: fixed;
+}
