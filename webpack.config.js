@@ -10,21 +10,23 @@ module.exports = {
     publicPath: "/",
     filename: "bundle.js"
   },
-  devServer:{
-    host: '0.0.0.0'
+  devServer: {
+    host: '0.0.0.0',
+    port: 9090,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+    }
   },
   module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
-          "css-loader"
-        ]
-      }
-    ]
+    rules: [{
+      test: /\.css$/,
+      use: [{
+          loader: MiniCssExtractPlugin.loader
+        },
+        "css-loader"
+      ]
+    }]
   },
   plugins: [
     new MiniCssExtractPlugin({

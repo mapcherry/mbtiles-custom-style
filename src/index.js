@@ -8,8 +8,8 @@ function style() {
 }
 
 let position = JSON.parse(window.localStorage.getItem("position")) || {
-  zoom: 2,
-  center: { lat: 24.3391016, lng: 44.1130898 }
+  zoom: 13,
+  center: { lat: 46.76517, lng: 23.58044 }
 };
 
 new Vue({
