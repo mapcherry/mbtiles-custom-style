@@ -5,6 +5,20 @@ npm install
 npm run dev
 ```
 
+# Run the UI in Docker
+
+Bash
+
+```
+docker run --rm -v $(pwd):/web --name mbtiles-custom-style --entrypoint /web/start.sh -p 9090:9090 -w="/web" node:13.8.0
+```
+
+Cmd
+
+```
+docker run --rm -v %CD%:/web --name mbtiles-custom-style --entrypoint /web/start.sh -p 9090:9090 -w="/web" node:13.8.0
+```
+
 # Configure the styles
 
 Add the json style under ./build/styles
